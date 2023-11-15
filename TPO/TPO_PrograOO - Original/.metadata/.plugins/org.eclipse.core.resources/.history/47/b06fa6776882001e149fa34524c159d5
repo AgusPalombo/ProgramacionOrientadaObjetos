@@ -1,0 +1,16 @@
+package Negocio;
+
+//Debito.java
+public abstract class Debito extends Pago {
+	
+ @Override
+ public double calcularRecargo(double total, int cuotas) {
+     return 0;
+ }
+
+ @Override
+ public String getNombre() {
+     return "Débito";
+ }
+}
+

@@ -1,0 +1,33 @@
+package Negocio;
+
+//Credito.java
+public class Credito extends Pago {
+ @Override
+ public double calcularDescuento(double total) {
+     return 0;
+ }
+
+ @Override
+ public double calcularRecargo(double total, int cuotas) {
+     double porcentajeRecargo = 0;
+
+     switch (cuotas) {
+         case 2:
+             porcentajeRecargo = 0.06;
+             break;
+         case 3:
+             porcentajeRecargo = 0.12;
+             break;
+         case 6:
+             porcentajeRecargo = 0.20;
+             break;
+     }
+
+     return total * porcentajeRecargo;
+ }
+
+ @Override
+ public String getNombre() {
+     return "Crédito";
+ }
+}

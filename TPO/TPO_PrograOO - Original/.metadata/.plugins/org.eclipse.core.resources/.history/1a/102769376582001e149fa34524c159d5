@@ -1,0 +1,9 @@
+package Negocio;
+
+
+public abstract class Pago {
+ public abstract double calcularDescuento(double total);
+ public abstract double calcularRecargo(double total, int cuotas);
+ public abstract String getNombre();
+}
+

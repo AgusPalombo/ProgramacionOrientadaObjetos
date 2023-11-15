@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+D:\UADE\Objetos\TPO\TPO_PrograOO - Copy\.metadata\.plugins\org.eclipse.jdt.core
+2549278783.index
+1067094681.index
+1865797976.index
+3767875729.index
