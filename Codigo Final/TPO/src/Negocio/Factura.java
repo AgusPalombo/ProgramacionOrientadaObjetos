@@ -67,18 +67,24 @@ public class Factura {
         System.out.println("Monto Final: " + montoFinal);
     }
     
+    
+    
     private static double calcularMontoTotal(HashMap<Producto, Integer> productosElegidos) {
         double montoTotal = 0;
 
-        for (HashMap.Entry<Producto, Integer> entry : productosElegidos.entrySet()) {
-            Producto producto = entry.getKey();
-            int cantidadComprada = entry.getValue();
+        // Recorrer el HashMap de productos elegidos
+        for (Producto producto : productosElegidos.keySet()) {
+            int cantidad = productosElegidos.get(producto);
 
-            double precioTotalProducto = producto.getPrecioUnitario() * cantidadComprada;
-            montoTotal = montoTotal + precioTotalProducto;
+            // Calcular el precio total por producto y sumarlo al monto total
+            double precioTotalProducto = producto.getPrecioUnitario() * cantidad;
+            montoTotal += precioTotalProducto;
         }
 
         return montoTotal;
     }
+
+
+    
 }
 
